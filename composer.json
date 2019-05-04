@@ -1,0 +1,54 @@
+{
+    "name": "rodriigogs/socialite-steam",
+    "description": "Laravel Socialite Steam",
+    "keywords": [
+        "rodriigogs",
+        "socialite-steam"
+    ],
+    "homepage": "https://github.com/rodriigogs/socialite-steam",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Rodrigo G. Silveira",
+            "email": "gsrodriigo@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "RodriigoGS\\SocialiteSteam\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RodriigoGS\\SocialiteSteam\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RodriigoGS\\SocialiteSteam\\SocialiteSteamServiceProvider"
+            ],
+            "aliases": {
+                "SocialiteSteam": "RodriigoGS\\SocialiteSteam\\SocialiteSteamFacade"
+            }
+        }
+    }
+}
