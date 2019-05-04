@@ -17,7 +17,9 @@
     ],
     "require": {
         "php": "^7.1",
-        "illuminate/support": "5.8.*"
+        "illuminate/support": "5.8.*",
+        "iignatov/lightopenid": "~1.0",
+        "laravel/socialite": "*"
     },
     "require-dev": {
         "orchestra/testbench": "3.8.*",
@@ -25,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "RodriigoGS\\SocialiteSteam\\": "src"
+            "RodriigoGS\\Socialite\\Steam\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "RodriigoGS\\SocialiteSteam\\Tests\\": "tests"
+            "RodriigoGS\\Socialite\\Steam\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -44,11 +46,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "RodriigoGS\\SocialiteSteam\\SocialiteSteamServiceProvider"
-            ],
-            "aliases": {
-                "SocialiteSteam": "RodriigoGS\\SocialiteSteam\\SocialiteSteamFacade"
-            }
+                "RodriigoGS\\Socialite\\Steam\\SteamServiceProvider"
+            ]
         }
     }
 }
