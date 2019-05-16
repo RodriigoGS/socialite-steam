@@ -65,6 +65,7 @@ class SteamProvider extends AbstractProvider implements ProviderInterface
     {
         return (new User())->setRaw($user)->map([
             'id'       => $user['steamid'],
+            'token'    => $user['steamid'],
             'nickname' => Arr::get($user, 'personaname'),
             'name'     => Arr::get($user, 'realname'),
             'email'    => null,
